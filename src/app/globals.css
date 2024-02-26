@@ -1,33 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Reset */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  :root {
+    --color-background: #1C1714;
+    --color-background-light: #f1f1f1;
+    --color-background-blue: linear-gradient(to left, rgb(68, 2, 223), rgb(79, 172, 248));
+    --color-background-yellow: linear-gradient(to left, rgb(255, 227, 69), rgb(255, 174, 0));
+    --color-background-yellowRight: linear-gradient(to right, rgb(255, 227, 69), rgb(255, 174, 0));
+    --color-background-cianoDark: linear-gradient(to left, rgb(3, 211, 159), rgb(2, 95, 56));
+    --color-background-orangeDark: linear-gradient(to left, rgb(255, 157, 29), rgb(121, 64, 0));
+    --color-background-orangeDarkRight: linear-gradient(to right, rgb(255, 157, 29), rgb(121, 64, 0));
+    --color-background-gradient-dark: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0), rgb(2, 2, 2), rgb(4, 4, 4), rgb(11, 11, 11), rgb(21, 21, 21));
+    --color-background-gradient-dark-02: linear-gradient(to top, rgb(7, 7, 7), rgb(10, 10, 10), rgb(13, 13, 13), rgb(17, 17, 17), rgb(19, 19, 19), rgb(21, 21, 21));
+
+    --color-01: #C97636;
+    --color-02: #914B16;
+    --color-03: #003D45;
+    --color-04: #32DAF0;
+    --color-text-01: #fff;
+    --color-text-02: #dbdbdb;
+    --color-text-03: #cecece;
+    --color-text-04: #a8a8a8;
+    --color-text-05: #000000;
+    --color-text-06: #1a1a1a;
+    --color-text-07: rgb(255, 157, 29);
+    --color-text-08: rgb(3, 211, 159);
+    --color-background2: #0e070c;
+    --color-background3: #141414;
+    --color-background-gradient: linear-gradient(#0b0a0c, #0b080e, #0e0714);
+    --color-05: #36123B;
+    --color-06: #9539ff;
+    --color-07: #3D0045;
+    --color-08: #b479f8;
+    --color-09: #B53BC6;
+    --color-10: rgb(77, 52, 127);
+    --color-11: #7f1be4;
+    --step--2: clamp(0.6075rem, 0.5063rem + 0.405vw, 0.9113rem);
+    --step--1: clamp(0.7294rem, 0.6079rem + 0.4858vw, 1.0938rem);
+    --step-0: clamp(0.875rem, 0.7292rem + 0.5833vw, 1.3125rem);
+    --step-1: clamp(1.05rem, 0.875rem + 0.7vw, 1.575rem);
+    --step-2: clamp(1.26rem, 1.05rem + 0.84vw, 1.89rem);
+    --step-3: clamp(1.5119rem, 1.2598rem + 1.0083vw, 2.2681rem);
+    --step-4: clamp(1.8144rem, 1.5119rem + 1.21vw, 2.7219rem);
+    --step-5: clamp(2.1775rem, 1.8148rem + 1.4508vw, 3.2656rem);
+    --step-6: clamp(2.25rem, 0.8438rem + 3.75vi, 3.75rem);
+
+    --max-width: 1170px;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Philosopher', sans-serif;
+  }
+
+  span {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  p,
+  a,
+  footer {
+    font-family: 'Kodchasan', sans-serif;
+  }
+}
+
+/* Effect Hover Header */
+@layer base {
+  .hover:hover>ul {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .hoverUnderline:hover>a>span {
+    background-size: 100% 3px !important;
+  }
+
+}
+
+/* Fonts */
+@layer base {
+
+  .philosopher-regular {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #00000000;
+  }
+
+  .philosopher-bold {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .philosopher-regular-italic {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .philosopher-bold-italic {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+}
+
+@layer base {
+  .kodchasan-extralight {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .kodchasan-extralight-italic {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  .kodchasan-light {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .kodchasan-light-italic {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .kodchasan-regular {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .kodchasan-regular-italic {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .kodchasan-medium {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .kodchasan-medium-italic {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .kodchasan-semibold {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .kodchasan-semibold-italic {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .kodchasan-bold {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .kodchasan-bold-italic {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+}
+
+/* Style Button */
+@layer base {
+  .btnStyle {
+    /* border: 2px solid rgba(167, 56, 0, 0.687); */
+    border-radius: 50%;
+    box-shadow: inset 0px -1px 3px 2px rgb(0, 0, 0);
+  }
+
+  .btnStyleBg::before {
+    position: absolute;
+    z-index: -0;
+    top: -3px;
+    left: -3px;
+    content: '';
+    width: 134px;
+    height: 134px;
+    background: linear-gradient(to bottom, rgb(255, 179, 113) 2%, rgb(255, 132, 0) 10%, rgb(94, 42, 5), rgb(94, 42, 5), rgb(31, 14, 1) 45%);
+    /* border: 2px solid rgba(167, 56, 0, 0.687); */
+    border-radius: 50%;
+    /* box-shadow:inset -4px 0 7px 4px rgb(0, 0, 0); */
+  }
+
+  .check {
+    font-family: "Font Awesome 5 free";
+    content: "\2713  ";
+    font-size: 21px;
+    color: aqua;
+  }
+
+}
+
+ /* Scroollbar */
+@layer base {
+  ::-webkit-scrollbar {
+    /* largura da barra de rolagem */
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent; /* cor de fundo da barra de rolagem */
+    border-radius: 10px; /* cantos arredondados */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #1b1b1b; /* cor da barra de rolagem */
+    border-radius: 10px; /* cantos arredondados */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; /* cor da barra de rolagem ao passar o mouse */
   }
 }

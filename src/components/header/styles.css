@@ -1,0 +1,51 @@
+@tailwind base;
+
+@layer base {
+  .logo {
+    grid-area: logo;
+  }
+
+  .nav {
+    grid-area: nav;
+  }
+
+  .socialmedia {
+    grid-area: socialmedia;
+  }
+
+  @media screen and (min-width:640px) and (max-width:768px) {
+    .header {
+      display: grid;
+      grid-template-areas: "logo socialmedia" "nav nav";
+      grid-template-columns: 1fr 1fr;
+      padding-top: 14px;
+    }
+
+    .logo,
+    .nav,
+    .socialmedia {
+      margin: auto;
+    }
+  }
+  @media screen and (max-width:640px) {
+    .header {
+      display: grid;
+      grid-template-areas: "logo socialmedia hamburguer";
+      grid-template-columns: 1fr 1fr auto;
+      /* gap: 21px; */
+      padding: 14px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav {
+      display: none;
+    }
+    .socialmedia {
+      width: 100%;
+      justify-content: end;
+    }
+    .hamburguer {
+      justify-content: end;
+    }
+  }
+}

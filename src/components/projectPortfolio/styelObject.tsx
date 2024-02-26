@@ -1,0 +1,23 @@
+export const stylePortfolio = {
+  sectionPortfolio: "relative flex flex-col gap-[210px] w-full h-auto px-0 py-[100px] bg-neutral-950",
+  portfolioContent: " flex flex-wrap justify-around max-w-[1140px] max-lg:w-full w-[90%] items-center text-neutral-50 relative m-auto max-md:flex-col-reverse max-md:gap-10 ",
+  portfolioContentInfo: " flex flex-col w-1/2 h-[500px] overflow-x-hidden overflow-y-auto p-[21px] max-md:w-[90%]  ",
+  portfolioTitleContainer: " flex w-full",
+  portfolioTitle: " text-[35px] text-neutral-50 max-sm:font-normal max-sm:text-xl font-semibold leading-9 [font-family:'Philosopher',sans-serif] mb-[35px] relative ",
+  portfolioTitleSpan: " relative",
+  portfolioTitleSpanBefore: " before:content-['_'] before:absolute before:top-[-7px] before:w-[70px] before:h-[7px] before:[background:var(--color-background-cianoDark)] before:text-[inherit] before:[font-family:'Philosopher',sans-serif] before:rounded-[14px_0_0_14px]",
+  btnRepository: " flex flex-col items-center gap-[7px] font-medium text-base max-sm:text-xs",
+  faGithubicon: " w-20 h-20 text-[rgb(233,233,233)] p-1 rounded-[14px] border-2 border-solid border-[rgb(0,255,157)]",
+  portfolioTextContent: " w-full text-[rgb(151,151,151)] mb-[35px] ",
+  portfolioTextTitle: " text-2xl text-neutral-50 font-normal [font-family:'Kodchasan',sans-serif]",
+  portfolioTextSubTitle: " text-lg text-neutral-300 [font-family:'Kodchasan',sans-serif] before:check ",
+  portfolioText: " text-sm ",
+  displayNone: " hidden",
+  textMore: " overflow-hidden animate-[hideText_2s_ease-in-out_both]",
+  portfolioBtnContainer: " flex justify-between w-[48%] gap-[30px] absolute bottom-[-49px] mt-[21px] max-md:w-full max-md:left-0 max-md:px-4 max-md:gap-5",
+  btn: " flex justify-center items-center [background:transparent] text-[rgb(236,236,236)] h-[42px] w-[210px] text-[17px] font-semibold uppercase cursor-pointer rounded-[21px] border-2 border-solid border-[rgb(0,201,134)]",
+  wrapImg: " max-w-[400px] min-w-[360px] h-[500px] [transform-style:preserve-3d] [perspective:800px] max-md:max-w-[700px] max-md:w-[82%] max-md:min-w-[300px] ",
+  portfolioImage: " w-full h-[500px] overflow-hidden shadow-[0_0_14px_7px_rgba(0,0,0,0145)] absolute [transform:rotateY(-7deg)] rounded-[5px] max-md:[transform:rotateY(0deg)]  ",
+  portfolioImageImg: " relative w-full h-auto shadow-[0_0_21px_4px_rgba(0,0,0,0786)] bottom-0",
+
+}

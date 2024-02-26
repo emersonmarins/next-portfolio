@@ -1,0 +1,24 @@
+@keyframes EsferaEffect {
+0%{
+  opacity: 0.3;
+}50% {
+  opacity: .9;
+}100% {
+  opacity: 0.3;
+}
+}
+@keyframes Rotate {
+  0%{
+    transform: rotateZ(0deg);    
+  }50% {
+    transform: rotateZ(180deg);
+  }100% {
+    transform: rotateZ(360deg);
+  }
+}
+.fashingEffect{
+  animation: EsferaEffect 11s infinite  ease-in-out;
+}
+.rotateEffect {
+  animation: Rotate 180s infinite linear;
+}
