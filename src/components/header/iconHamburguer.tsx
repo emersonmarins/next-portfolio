@@ -19,9 +19,9 @@ export const Hamburguer = ({menuOpen, setMenuOpen}: Props) => {
       className="hamburguer h-[1.6rem] flex grow justify-endcursor-pointer ml-7 sm:hidden"
     >
       <div className="flex flex-col justify-between w-6 h-[1.4rem]">
-        <div className={`${menuOpen ? 'h-[1px] w-full bg-zinc-200 rotate-45 translate-y-[.65rem]' : 'h-[2px] w-full bg-zinc-200'} `} style={transitionStyle}></div>
-        <div className={`${menuOpen ? 'h-[1px] w-full bg-zinc-200 opacity-0' : 'h-[2px] w-full bg-zinc-200'} `} style={transitionStyle}></div>
-        <div className={`${menuOpen ? 'h-[1px] w-full bg-zinc-200 -rotate-45 translate-y-[-.65rem]' : 'h-[2px] w-full bg-zinc-200'} `} style={transitionStyle}></div>
+        <div className={`${menuOpen ? 'h-[1px] w-full bg-tertiary-light rotate-45 translate-y-[.65rem]' : 'h-[2px] w-full bg-tertiary-light'} `} style={transitionStyle}></div>
+        <div className={`${menuOpen ? 'h-[1px] w-full bg-tertiary-light opacity-0' : 'h-[2px] w-full bg-tertiary-light'} `} style={transitionStyle}></div>
+        <div className={`${menuOpen ? 'h-[1px] w-full bg-tertiary-light -rotate-45 translate-y-[-.65rem]' : 'h-[2px] w-full bg-tertiary-light'} `} style={transitionStyle}></div>
       </div>
     </div>
   )

@@ -1,11 +1,12 @@
-export default function Button(options: any) {
-  console.log(options.options)
+import { cn } from "@/lib/utils"
+
+
+export default function Button({options, className}: any) {
+  console.log(className)
+  console.log(options)
   return (
-    <span className="
-      w-64 my-5 py-2 text-2xl [font-family:'Kodchasan',_sans-serif] text-white bg-neutral-900 border border-orange-700 rounded-[2rem]
-      uppercase cursor-pointer relative text-center hover:bg-gradient-linear 
-      transition-colors hover:transition-colors
-      "
-    >{options.options}</span>
+    <span 
+    className={cn( "w-56 my-5 py-2 text-xl [font-family:'Kodchasan',_sans-serif] text-secondary-light bg-transparent-dark border border-primary-bord rounded-[2rem] uppercase cursor-pointer relative text-center hover:bg-primary-linear hover:animate-pulse-button transition-colors hover:transition-colors", className)}
+    >{options}</span>
   )
 }

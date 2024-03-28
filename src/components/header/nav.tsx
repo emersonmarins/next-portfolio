@@ -1,71 +1,78 @@
 import { FaChevronDown } from "react-icons/fa";
 import "./styles.css"
-import { Hamburguer } from "./iconHamburguer";
+import Link from "next/link";
 
 const styleNav = {
-  a: "block leading-normal relative px-0 py-[15px] text-[var(--color-text-01)] capitalize",
-  li: "pr-0",
+  a: "block leading-normal relative px-0 py-[15px] text-primary-light capitalize",
+  li: "pr-0 ",
   dropdown: "relative hover flex items-center gap-2 ",
-  chevronDown: "-rotate-90 text-[var(--color-text-03)] size-3 ",
-  chevronDownPrimary: "absolute top-[calc(50%_-_6px)] -translate-x-1/2 -right-6 text-[var(--color-text-03)] size-3 ",
-  subMenu: "opacity-0 invisible flex flex-col justify-center gap-2.5 absolute left-[-30px] w-auto min-w-[200px] bg-[color:var(--color-background3)] shadow-[1px_1px_2px_1px_rgba(0,0,0,0.233)] transition-[0.5s] duration-[ease] delay-[125ms] p-[30px] rounded-sm top-full ",
-  subMenuRight: "top-[-100%] ml-[30px] left-full ",
-  subMenuLeft: "top-[-100%] left-[-160%] ml-[30px] ",
+  chevronDown: "-rotate-90 text-primary-light size-3 ",
+  chevronDownPrimary: "absolute top-[calc(50%_-_6px)] -translate-x-1/2 -right-6 text-primary-light size-3 ",
+  subMenu: "opacity-1 invisible flex flex-col justify-center gap-2.5 absolute left-[-30px] w-auto min-w-[200px] bg-[color:var(--color-background3)] shadow-[1px_1px_2px_1px_rgba(0,0,0,0.233)] transition-[0.5s] duration-[ease] delay-[125ms] p-[30px] rounded-sm top-full ",
+  subMenuRight: "top-[-30px] ml-[30px] left-full ",
+  subMenuLeft: "top-[-20px] left-[-160%] ml-[30px] ",
   upArrow: "after:rotate-45 after:content-['_'] after:border-[color:var(--color-background3)] after:absolute after:top-[-7px] after:rounded-[0_0_100%] after:border-[14px] after:border-solid after:left-1/4 ",
-  lineEfectHover: "bg-[linear-gradient(black,black)] bg-[length:0_3px] bg-[0_100%] bg-no-repeat text-[var(--color-text-01)] transition-[background-size] duration-500 ease-linear pb-0.5 capitalize",
+  lineEfectHover: "bg-[linear-gradient(black,black)] bg-[length:0_3px] bg-[0_100%] bg-no-repeat text-primary-light transition-[background-size] duration-500 ease-linear pb-0.5 capitalize",
 };
 
 const menuConfig = [
   {
     type: "default",
-    name: "home"
+    name: "home",
+    url: "/",
   },
   {
     type: "dropdown",
     name: "portfolio",
+    url: "/",
     dropdown: [
       {
         type: "dropdown",
         name: "html css js",
+        url: "/",
         dropdown: [
-          { type: "default", name: "louse soft design" },
-          { type: "default", name: "marins movies" },
-          { type: "default", name: "porcellan" },
-          { type: "default", name: "artezanal" },
-          { type: "default", name: "hotel" }
+          { type: "default", name: "louse soft design", url: "/" },
+          { type: "default", name: "marins movies", url: "/" },
+          { type: "default", name: "porcellan", url: "/" },
+          { type: "default", name: "artezanal", url: "/" },
+          { type: "default", name: "hotel", url: "/" }
         ]
       },
       {
         type: "dropdown",
         name: "next",
+        url: "/",
         dropdown: [
-          { type: "default", name: "louse soft design" },
-          { type: "default", name: "marins movies" },
-          { type: "default", name: "porcellan" },
-          { type: "default", name: "artezanal" },
-          { type: "default", name: "hotel" }
+          { type: "default", name: "louse soft design", url: "/" },
+          { type: "default", name: "marins movies", url: "/" },
+          { type: "default", name: "porcellan", url: "/" },
+          { type: "default", name: "artezanal", url: "/" },
+          { type: "default", name: "hotel", url: "/" }
         ]
       },
       {
         type: "dropdown",
         name: "reactNative",
+        url: "/",
         dropdown: [
-          { type: "default", name: "louse soft design" },
-          { type: "default", name: "marins movies" },
-          { type: "default", name: "porcellan" },
-          { type: "default", name: "artezanal" },
-          { type: "default", name: "hotel" }
+          { type: "default", name: "louse soft design", url: "/" },
+          { type: "default", name: "marins movies", url: "/" },
+          { type: "default", name: "porcellan", url: "/" },
+          { type: "default", name: "artezanal", url: "/" },
+          { type: "default", name: "hotel", url: "/" }
         ]
       }
     ]
   },
   {
     type: "default",
-    name: "quem sou"
+    name: "quem sou",
+    url: "/",
   },
   {
     type: "default",
-    name: "contato"
+    name: "contato",
+    url: "/",
   },
 ];
 
@@ -78,36 +85,37 @@ export const Nav = ({ menuOpen, setMenuOpen }: Props) => {
   return (
     <nav className="relative nav z-[100]">
       <div className={`head max-sm:flex`}>
-
       </div>
       <ul className="flex gap-7">
         {menuConfig.map((menuItem) => (
           <li key={menuItem.name} className={menuItem.type === 'dropdown' ? styleNav.dropdown : styleNav.li}>
             {menuItem.type === 'default' ? (
-              <a className={styleNav.a} href="#">{menuItem.name}</a>
+              <Link href={`${menuItem.url}`} className={styleNav.a}>
+                {menuItem.name}
+              </Link>
             ) : (
               <>
-                <a className={styleNav.a} href="#">{menuItem.name}</a>
+                <Link className={styleNav.a} href={`${menuItem.url}`}>{menuItem.name}</Link>
                 <FaChevronDown className={styleNav.chevronDownPrimary} />
                 <ul className={styleNav.subMenu + styleNav.upArrow}>
                   {menuItem.dropdown?.map((subMenuItem) => (
                     <li key={subMenuItem.name} className={subMenuItem.type === 'default' ? 'hoverUnderline' : (styleNav.dropdown + 'hoverUnderline')}>
                       {subMenuItem.type === 'default' ? (
-                        <a href="#">
+                        <Link href={`${subMenuItem.url}`}>
                           <span className={styleNav.lineEfectHover}>{subMenuItem.name}</span>
-                        </a>
+                        </Link>
                       ) : (
                         <>
-                          <a href="#">
+                          <Link href={`${subMenuItem.url}`}>
                             <span className={styleNav.lineEfectHover}>{subMenuItem.name}</span>
-                          </a>
+                          </Link>
                           <FaChevronDown className={styleNav.chevronDown} />
                           <ul className={styleNav.subMenu + styleNav.subMenuRight}>
                             {subMenuItem.dropdown?.map((subMenuItem) => (
                               <li key={subMenuItem.name} className={"hoverUnderline"}>
-                                <a href="#">
+                                <Link href={`${subMenuItem.url}`}>
                                   <span className={styleNav.lineEfectHover}>{subMenuItem.name}</span>
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>

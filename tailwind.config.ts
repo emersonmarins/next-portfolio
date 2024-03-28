@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -52,6 +52,54 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+
+      },
+      backgroundColor: {
+        primary: 'var(--background-primary)',
+        secondary: 'var(--background-secondary)',
+        header: 'var(--background-header)',
+        'transparent-dark': 'var(--background-transparent-dark)',
+        'primary-dark': 'var(--background-primary-dark)',
+        'primary-light': 'var(--background-primary-light)',
+        'secondary-dark': 'var(--background-secondary-dark)',
+        'tertiary-dark': 'var(--background-tertiary-dark)',
+        'tertiary-light': 'var(--background-tertiary-light)',
+
+      },
+      backgroundImage: {
+        'primary-linear': 'var(--background-primary-linear)',
+        'primary-linear-light': 'var(--background-primary-linear-light)',
+        'primary-radial': 'var(--background-primary-radial)',
+        'secondary-radial': 'var(--background-secondary-radial)',
+        'secondary-linear': 'var(--background-secondary-linear-light)',
+        'secondary-dark-linear': 'var(--background-secondary-gradient-dark)',
+        'tertiary-dark-linear': 'var(--background-tertiary-gradient-dark)',
+        'tertiary-radial': 'var(--background-tertiary-radial)',
+
+      },
+      textColor: {
+        "primary": "var(--text-primary)",
+        "primary-light": "var(--text-primary-light)",
+        "primary-dark": "var(--text-primary-dark)",
+        "secondary": "var(--text-secondary)",
+        "secondary-light": "var(--text-secondary-light)",
+        "secondary-dark": "var(--text-secondary-dark)",
+        "tertiary": "var(--text-tertiary)",
+        "tertiary-light": "var(--text-tertiary-light)",
+        "tertiary-dark": "var(--text-tertiary-dark)",
+        "quaternary-light": "var(--text-quaternary-light)",
+        "quaternary-dark": "var(--text-quaternary-dark)",
+
+      },
+      borderColor: {
+        "primary-bord": "var(--text-primary)",
+        "primary-light-bord": "var(--text-primary-light)",
+        "primary-dark-bord": "var(--text-primary-dark)",
+        "secondary-bord": "var(--text-secondary)",
+        "secondary-light-bord": "var(--text-secondary-light)",
+        "secondary-dark-bord": "var(--text-secondary-dark)",
+        'transparent-dark': 'var(--background-transparent-dark)',
+
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -67,12 +115,58 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "show-menu": {
+          "0%": { opacity: "0", display: "none", transform: "translateX(100%)" },
+          "5%": { opacity: "0", display: "flex", transform: "translateX(100%)" },
+          "100%": { opacity: "1", display: "flex", transform: "translateX(0%)" },
+        },
+        "hidden-menu": {
+          "0%": { opacity: "1", display: "flex", transform: "translateX(0%)" },
+          "95%": { opacity: "0", display: "flex", transform: "translateX(100%)" },
+          "100%": { opacity: "0", display: "none", transform: "translateX(100%)" },
+        },
+        "pulse-button": {
+          "0%": {
+            scale: "1",
+          },
+          "50%": {
+            scale: "1.1",
+          },
+          "100%": {
+            scale: "1",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "show-menu": "show-menu 1s ease-in-out",
+        "hidden-menu": "hidden-menu 1s ease-in-out",
+        "pulse-button": "pulse-button 1.4s ease-in-out",
       },
     },
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      '2md': '900px',
+      // => @media (min-width: 900px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      '2lg': '1170px',
+      // => @media (min-width: 1170px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    }
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config

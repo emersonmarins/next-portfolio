@@ -13,6 +13,7 @@
     grid-area: socialmedia;
   }
 
+
   @media screen and (min-width:640px) and (max-width:768px) {
     .header {
       display: grid;

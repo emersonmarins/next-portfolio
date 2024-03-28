@@ -9,6 +9,7 @@
   * {
     margin: 0;
     padding: 0;
+    overflow: visible;
   }
 }
 
@@ -46,16 +47,48 @@
   }
 
   :root {
-    --color-background: #1C1714;
-    --color-background-light: #f1f1f1;
-    --color-background-blue: linear-gradient(to left, rgb(68, 2, 223), rgb(79, 172, 248));
-    --color-background-yellow: linear-gradient(to left, rgb(255, 227, 69), rgb(255, 174, 0));
-    --color-background-yellowRight: linear-gradient(to right, rgb(255, 227, 69), rgb(255, 174, 0));
-    --color-background-cianoDark: linear-gradient(to left, rgb(3, 211, 159), rgb(2, 95, 56));
-    --color-background-orangeDark: linear-gradient(to left, rgb(255, 157, 29), rgb(121, 64, 0));
-    --color-background-orangeDarkRight: linear-gradient(to right, rgb(255, 157, 29), rgb(121, 64, 0));
-    --color-background-gradient-dark: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0), rgb(2, 2, 2), rgb(4, 4, 4), rgb(11, 11, 11), rgb(21, 21, 21));
-    --color-background-gradient-dark-02: linear-gradient(to top, rgb(7, 7, 7), rgb(10, 10, 10), rgb(13, 13, 13), rgb(17, 17, 17), rgb(19, 19, 19), rgb(21, 21, 21));
+    --background-primary: rgb(223, 119, 0);
+    --background-primary-light: rgb(255, 255, 255);
+    --background-primary-dark: rgb(17, 17, 17);
+    --background-primary-linear: linear-gradient(to top, #000000 70%, #090909);
+    --background-primary-linear-light: linear-gradient(to left, #e9e9e9, #f7f7f7, #e9e9e9, #f7f7f7, #e9e9e9);
+    --background-primary-radial: radial-gradient(#ffffff, #ffffff, #ececec);
+    --background-secondary: rgb(199, 106, 0);
+    --background-secondary-dark: rgb(23, 23, 23);
+    --background-secondary-linear-light: linear-gradient(to left, #e7e7e7, #efefef, #e7e7e7);
+    --background-secondary-gradient-dark: linear-gradient(to top, rgb(7, 7, 7), rgb(10, 10, 10), rgb(13, 13, 13), rgb(17, 17, 17), rgb(19, 19, 19), rgb(21, 21, 21));
+    --background-secondary-radial: radial-gradient(#ffffff, #ffffff, #a9a9a9);
+    --background-tertiary-radial: radial-gradient( #ebebeb 30%, #ffffff 60%, #3b3b3b );
+    --background-tertiary-gradient-dark: linear-gradient( rgb(14, 14, 14), rgb(16, 16, 16), rgb(19, 19, 19), rgb(21, 21, 21), rgb(16, 16, 16), rgb(21, 21, 21));
+    --background-tertiary-dark: rgb(29, 29, 29);
+    --background-tertiary-light: rgb(204, 204, 204);
+
+    --background-transparent-dark: #0909096b;
+    --background-header: #171717;
+    --background-light: #f1f1f1;
+
+
+    --background-blue: linear-gradient(to left, rgb(68, 2, 223), rgb(79, 172, 248));
+    --background-yellow: linear-gradient(to left, rgb(255, 227, 69), rgb(255, 174, 0));
+    --background-yellowRight: linear-gradient(to right, rgb(255, 227, 69), rgb(255, 174, 0));
+    --background-cianoDark: linear-gradient(to left, rgb(3, 211, 159), rgb(2, 95, 56));
+    --background-orangeDark: linear-gradient(to left, rgb(255, 157, 29), rgb(121, 64, 0));
+    --background-orange-linear: linear-gradient(to right, rgba(148, 148, 148, 0.123), rgba(233, 233, 233, 0.123), rgba(148, 148, 148, 0.123));
+    --background-orangeDarkRight: linear-gradient(to right, rgb(255, 157, 29), rgb(121, 64, 0));
+    --background-gradient-dark: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0), rgb(2, 2, 2), rgb(4, 4, 4), rgb(11, 11, 11), rgb(21, 21, 21));
+
+    --text-primary: rgb(223, 119, 0);
+    --text-primary-dark: #070707;
+    --text-primary-light: #ffffff;
+    --text-secondary: rgb(43, 23, 0);
+    --text-secondary-dark: #171717;
+    --text-secondary-light: #ececec;
+    --text-tertiary: rgb(199, 106, 0);
+    --text-tertiary-dark: rgb(36, 36, 36);
+    --text-tertiary-light: rgb(204, 204, 204);
+    --text-quaternary: rgb(68, 0, 255);
+    --text-quaternary-dark: rgb(70, 70, 70);
+    --text-quaternary-light: rgb(131, 131, 131);
 
     --color-01: #C97636;
     --color-02: #914B16;
@@ -273,7 +306,6 @@
 /* Style Button */
 @layer base {
   .btnStyle {
-    /* border: 2px solid rgba(167, 56, 0, 0.687); */
     border-radius: 50%;
     box-shadow: inset 0px -1px 3px 2px rgb(0, 0, 0);
   }
@@ -282,43 +314,47 @@
     position: absolute;
     z-index: -0;
     top: -3px;
+    bottom: -3px;
     left: -3px;
+    right: -3px;
     content: '';
-    width: 134px;
-    height: 134px;
     background: linear-gradient(to bottom, rgb(255, 179, 113) 2%, rgb(255, 132, 0) 10%, rgb(94, 42, 5), rgb(94, 42, 5), rgb(31, 14, 1) 45%);
-    /* border: 2px solid rgba(167, 56, 0, 0.687); */
     border-radius: 50%;
-    /* box-shadow:inset -4px 0 7px 4px rgb(0, 0, 0); */
+    animation: Rotate 2.1s infinite linear;
   }
 
   .check {
     font-family: "Font Awesome 5 free";
     content: "\2713  ";
     font-size: 21px;
-    color: aqua;
+    color: var(--text-primary);
   }
 
 }
 
- /* Scroollbar */
+/* Scroollbar */
 @layer base {
   ::-webkit-scrollbar {
     /* largura da barra de rolagem */
     width: 7px;
   }
-  
+
   ::-webkit-scrollbar-track {
-    background: transparent; /* cor de fundo da barra de rolagem */
-    border-radius: 10px; /* cantos arredondados */
+    background: transparent;
+    /* cor de fundo da barra de rolagem */
+    border-radius: 10px;
+    /* cantos arredondados */
   }
-  
+
   ::-webkit-scrollbar-thumb {
-    background: #1b1b1b; /* cor da barra de rolagem */
-    border-radius: 10px; /* cantos arredondados */
+    background: #1b1b1b;
+    /* cor da barra de rolagem */
+    border-radius: 10px;
+    /* cantos arredondados */
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
-    background: black; /* cor da barra de rolagem ao passar o mouse */
+    background: black;
+    /* cor da barra de rolagem ao passar o mouse */
   }
 }
