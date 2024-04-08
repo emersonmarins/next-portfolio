@@ -11,7 +11,7 @@ const styleHero = {
   leftTitleH1: "text-[length:var(--step-5)] text-white [font-family:'Philosopher',sans-serif] font-semibold after:block after:content-['_'] after:[background:linear-gradient(to_left,hsla(0,0%,100%,0.034),hsla(0,0%,100%,0.226),#ffffffe5)] after:w-[140px] after:h-1 after:[animation-name:none] after:mt-[3px]",
   leftTitleH1Span: "text-[color:var(--color-text-08)] text-[inherit] [font-family:'Philosopher',sans-serif]",
   leftText: "text-[rgb(168,168,168)]",
-  leftTechnologies: "flex gap-5 transition-[0.7s] duration-[both]",
+  leftTechnologies: "flex gap-5 transition-[0.7s] [animation-fill-mode:_both]",
 
 
   introducingLeftIconsT: "cursor-pointer hover: animate-[rotate_1.4s_ease]",
@@ -25,7 +25,7 @@ const styleHero = {
 
   svg2: "w-[140px] h-auto",
 
-  mongod: "fill-neutral-100 text-[#003D45] transition-[1.4s] duration-[ease]",
+  mongod: "fill-neutral-100 text-[#003D45] transition-[1.4s] ease-in-out",
 
 
   introducingRight: "flex max-w-[calc(1170px_ / _2.5)]"

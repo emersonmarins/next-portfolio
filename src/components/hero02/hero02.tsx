@@ -18,7 +18,7 @@ import { Skill } from "./skill"
 const styleHero = {
   left: "flex flex-col justify-center gap-[49px] grow ",
   faBrands: "text-secondary-light font-thin text-5xl border rounded-full border-3 p-2 border-primary-bord",
-  leftTechnologies: "flex gap-4 transition-[0.7s] duration-[both]",
+  leftTechnologies: "flex gap-4 transition-[0.7s] [animation-fill-mode:_both]",
 
 }
 
@@ -37,7 +37,7 @@ export const Hero02 = () => {
         max-[860px]:[position:inherit]
       "
         >
-          <div className="relative flex justify-center h-[600px] w-full overflow-hidden
+          <div className="relative flex justify-center h-[600px] w-full 
           max-[860px]:h-[500px]
         "
           >
@@ -46,18 +46,16 @@ export const Hero02 = () => {
               alt="esfera"
               height={1500}
               width={2000}
-              className="absolute opacity-80 bottom-0 w-auto h-[800px] object-cover fashingEffect
-              max-[860px]:h-[750px]
-            "
+              className="absolute opacity-80 bottom-0 w-auto h-[800px] object-cover overflow-hidden fashingEffect max-[860px]:h-[750px]"
+              priority
             />
             <Image
               src={MyFace}
               alt="esfera"
               height={700}
               width={700}
-              className="absolute bottom-0 h-[570px] w-auto m-auto
-          max-[860px]:h-[500px] max-[860px]:w-auto max-[860px]:object-cover
-          "
+              className="absolute bottom-0 h-[570px] overflow-hidden w-auto m-auto max-[860px]:h-[500px] max-[860px]:w-auto max-[860px]:object-cover"
+              priority
             />
           </div>
         </div>

@@ -64,8 +64,13 @@ export const SoftSkills = (): any => (
     {softSkill.map((element, index) => (
       <div className={index % 2 === 0 ? (styleSkill.skillWrapper) : (styleSkill.skillWrapper + ' bg-secondary-dark-linear')} key={index}>
         <div className="">
-          <Image src={element.icon} height={800} width={800} alt="imagem de um globo"
+          <Image
+            src={element.icon}
+            height={800}
+            width={800}
+            alt="imagem de um globo"
             className=" w-[600px] h-auto max-md:w-3/4 rounded-xl m-auto overflow-hidden"
+            priority
           />
         </div>
 

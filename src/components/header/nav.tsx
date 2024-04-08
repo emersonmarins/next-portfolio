@@ -8,7 +8,7 @@ const styleNav = {
   dropdown: "relative hover flex items-center gap-2 ",
   chevronDown: "-rotate-90 text-primary-light size-3 ",
   chevronDownPrimary: "absolute top-[calc(50%_-_6px)] -translate-x-1/2 -right-6 text-primary-light size-3 ",
-  subMenu: "opacity-1 invisible flex flex-col justify-center gap-2.5 absolute left-[-30px] w-auto min-w-[200px] bg-[color:var(--color-background3)] shadow-[1px_1px_2px_1px_rgba(0,0,0,0.233)] transition-[0.5s] duration-[ease] delay-[125ms] p-[30px] rounded-sm top-full ",
+  subMenu: "opacity-1 invisible flex flex-col justify-center gap-2.5 absolute left-[-30px] w-auto min-w-[200px] bg-[color:var(--color-background3)] shadow-[1px_1px_2px_1px_rgba(0,0,0,0.233)] transition-[0.5s] ease-in-out delay-150 p-[30px] rounded-sm top-full ",
   subMenuRight: "top-[-30px] ml-[30px] left-full ",
   subMenuLeft: "top-[-20px] left-[-160%] ml-[30px] ",
   upArrow: "after:rotate-45 after:content-['_'] after:border-[color:var(--color-background3)] after:absolute after:top-[-7px] after:rounded-[0_0_100%] after:border-[14px] after:border-solid after:left-1/4 ",

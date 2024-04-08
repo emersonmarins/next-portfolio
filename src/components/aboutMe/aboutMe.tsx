@@ -68,10 +68,17 @@ const AboutMe = () => (
 
 const SelfImage = () => (
   <div className="relative">
-    <div className="w-[368px] h-[507px] m-auto relative z-20 rounded-br-[150px]">
+    <div className="sm:w-[450px] w-[350px] h-auto m-auto relative z-20 rounded-br-[150px]">
       {/* Rectangle */}
-      <div className="sm:w-[450px] sm:h-[500px] w-[350px] h-[400px] left-[18px] bottom-0 absolute bg-gradient-to-b from-zinc-950 via-neutral-800 to-zinc-950 rounded-tl-[550px] rounded-tr-[250px] rounded-bl-[5px] rounded-br-[150px]" />
-      <Image className="sm:w-[400px] w-[300px] h-auto left-[40px] bottom-0 absolute" src={EmersonMarins} alt="Imagem de Emerson Marins" height={1200} width={700} />
+      <div className="sm:h-[500px] w-full h-[400px] right-[20px] bottom-0 absolute -z-10 bg-gradient-to-b from-zinc-950 via-neutral-800 to-zinc-950 rounded-tl-[550px] rounded-tr-[250px] rounded-bl-[5px] rounded-br-[150px]" />
+      <Image
+        className="sm:w-[400px] w-[300px] h-auto "
+        src={EmersonMarins}
+        alt="Imagem de Emerson Marins"
+        height={1200}
+        width={700}
+        priority={true}
+      />
     </div>
   </div>
 )

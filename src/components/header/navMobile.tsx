@@ -91,21 +91,21 @@ export const Search = ({ menuOpen, setMenuOpen }: Props) => {
             <CarouselItem className={styles.items} onClick={() => { setItemSelected(0) }}>
               <Image
                 src={homeicon} height={300} width={300} alt="page home icon"
-                className=" object-cover w-24 h-24 m-0 p-0 opacity-50"
+                className=" object-cover overflow-hidden w-24 h-24 m-0 p-0 opacity-50"
               />
               <p className={styles.text}>home</p>
             </CarouselItem>
             <CarouselItem className={styles.items} onClick={() => { setItemSelected(1) }}>
               <Image
                 src={portfolioIcon} height={300} width={300} alt="page home icon"
-                className=" object-cover w-24 h-24 m-0 p-0 opacity-50"
+                className=" object-cover overflow-hidden w-24 h-24 m-0 p-0 opacity-50"
               />
               <p className={styles.text}>portifolio</p>
             </CarouselItem>
             <CarouselItem className={styles.items} onClick={() => { setItemSelected(2) }}>
               <Image
                 src={SoftSkillsIcon} height={300} width={300} alt="page home icon"
-                className=" object-cover w-24 h-24 m-0 p-0 opacity-50"
+                className=" object-cover overflow-hidden w-24 h-24 m-0 p-0 opacity-50"
               />
               <p className={styles.text}>Soft Skills</p>
             </CarouselItem>
@@ -118,7 +118,7 @@ export const Search = ({ menuOpen, setMenuOpen }: Props) => {
             }}>
               <Image
                 src={contatoIcon} height={300} width={300} alt="page home icon"
-                className=" object-cover w-24 h-24 m-0 p-0 opacity-50"
+                className=" object-cover overflow-hidden w-24 h-24 m-0 p-0 opacity-50"
               />
               <p className={styles.text + "top-2"}>contato</p>
             </CarouselItem>
@@ -128,7 +128,7 @@ export const Search = ({ menuOpen, setMenuOpen }: Props) => {
         <div className="w-full border-b-[1px] border-[#fefefe70] h-1"></div>
         <div className="flex flex-col gap-5 m-auto w-[90%]">
           <Image src={itemImage[itemSelected]} alt="imagem" height={800} width={1200}
-            className="rounded-2xl w-full h-[calc(60vw)] m-auto object-cover"
+            className="rounded-2xl w-full h-[calc(60vw)] m-auto object-cover overflow-hidden"
           />
           {itemSelected === 0 && (
             <a href="/" onClick={() => { setMenuOpen(false) }}>

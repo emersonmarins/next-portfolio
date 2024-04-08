@@ -12,6 +12,7 @@ export const ImageContent = () => (
         width={2000}
         alt="image Web Site"
         className={stylePortfolio.portfolioImageImg+' max-sm:object-cover overflow-hidden max-sm:object-top'}
+        priority={true}
       />
     </div>
   </div>
