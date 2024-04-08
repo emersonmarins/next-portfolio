@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1035"
+   width="258.81186"
+   height="205.20067"
+   viewBox="0 0 258.81186 205.20067"
+   sodipodi:docname="Minha trajetória.png"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1039">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2113">
+      <stop
+         style="stop-color:#ffd439;stop-opacity:1;"
+         offset="0"
+         id="stop2111" />
+      <stop
+         style="stop-color:#ff2825;stop-opacity:1;"
+         offset="1"
+         id="stop2109" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2113"
+       id="radialGradient2253"
+       cx="359.60336"
+       cy="156.91812"
+       fx="359.60336"
+       fy="156.91812"
+       r="111.0065"
+       gradientTransform="matrix(-1.8422016,-0.00841527,0.01149675,-1.5671525,926.73685,373.7653)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1037"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1041"
+     transform="translate(-69.947563,-89.195572)">
+    <path
+       style="fill:url(#radialGradient2253);fill-opacity:1;stroke-width:1.03555"
+       d="M 131.03098,292.93129 C 109.96736,288.41085 96.590732,279.19231 86.200999,262.03659 73.091663,240.39023 67.179463,202.54534 71.183515,165.9074 75.880232,122.93133 93.028103,98.744905 124.16645,91.176961 c 10.14143,-2.464789 29.47303,-2.65783 42.34151,-0.422803 23.72464,4.120549 59.91902,16.782422 88.65466,31.014032 93.63263,46.3725 97.88792,90.89557 12.96701,135.67358 -25.76071,13.58339 -54.72814,25.10985 -78.35302,31.17755 -21.91912,5.6296 -44.78529,7.30799 -58.74563,4.31197 z"
+       id="path1433" />
+  </g>
+</svg>

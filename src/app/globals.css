@@ -73,6 +73,7 @@
     --background-yellowRight: linear-gradient(to right, rgb(255, 227, 69), rgb(255, 174, 0));
     --background-cianoDark: linear-gradient(to left, rgb(3, 211, 159), rgb(2, 95, 56));
     --background-orangeDark: linear-gradient(to left, rgb(255, 157, 29), rgb(121, 64, 0));
+    --background-orangeDark: linear-gradient(to left, rgb(255, 157, 29), rgb(121, 64, 0));
     --background-orange-linear: linear-gradient(to right, rgba(148, 148, 148, 0.123), rgba(233, 233, 233, 0.123), rgba(148, 148, 148, 0.123));
     --background-orangeDarkRight: linear-gradient(to right, rgb(255, 157, 29), rgb(121, 64, 0));
     --background-gradient-dark: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0), rgb(2, 2, 2), rgb(4, 4, 4), rgb(11, 11, 11), rgb(21, 21, 21));
@@ -120,7 +121,7 @@
     --step-3: clamp(1.5119rem, 1.2598rem + 1.0083vw, 2.2681rem);
     --step-4: clamp(1.8144rem, 1.5119rem + 1.21vw, 2.7219rem);
     --step-5: clamp(2.1775rem, 1.8148rem + 1.4508vw, 3.2656rem);
-    --step-6: clamp(2.25rem, 0.8438rem + 3.75vi, 3.75rem);
+    --step-6: clamp(2.25rem, 2.1438rem + 1.60vw, 3.65rem);
 
     --max-width: 1170px;
   }
