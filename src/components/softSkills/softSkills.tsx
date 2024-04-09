@@ -1,8 +1,11 @@
+"use client"
 import Image from "next/image";
 import Comunicacao02 from "/public/assets/app/skills/comunicacao02.png"
 import TraEquip04 from "/public/assets/app/skills/trabalhoemequipe04.png"
 import Resolution01 from "/public/assets/app/skills/resolution03.png"
 import Bussola from "/public/assets/app/skills/bussola.webp"
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "../ui/carousel";
+import { useState } from "react";
 
 
 
@@ -45,50 +48,61 @@ const softSkill = [
   },
 ]
 
-export const SoftSkills = (): any => (
-  <SkillsContainer>
+export const SoftSkills = (): any => {
+  return (
+    <Carousel className="relative z-20">
 
-    <h2 className=" relative z-20 text-6xl font-medium text-center [font-family:_philosopher,_'sans-serif']
-        mt-20 max-md:mt-0 max-md:translate-y-10
-        before:content-[''] before:h-[100vw] before:w-[100vw] before:bg-tertiary-radial
-        before:rounded-[50%] before:top-[-70vw] before:[box-shadow:_0_0_41px_2px_#17171750]
-        before:absolute before:-z-10 before:left-[50%] max-md:before:h-[150vw] max-md:before:w-[200vw] 
-      ">
-      Soft&nbsp;
-      <span className="[font-family:_philosopher,_'sans-serif'] text-primary">
-        Skills
-      </span>
-      <p className="relative z-50 translate-y-2 flex justify-center [font-size:var(--step-0)] text-quaternary-dark"
-      >Como desenvolvi minhas habilidade</p>
-    </h2>
-    {softSkill.map((element, index) => (
-      <div className={index % 2 === 0 ? (styleSkill.skillWrapper) : (styleSkill.skillWrapper + ' bg-secondary-dark-linear')} key={index}>
-        <div className="">
-          <Image
-            src={element.icon}
-            height={800}
-            width={800}
-            alt="imagem de um globo"
-            className=" w-[600px] h-auto max-md:w-3/4 rounded-xl m-auto overflow-hidden"
-            priority
-          />
-        </div>
+      <CarouselContent>
+        {softSkill.map((element, index) => {
+          return (
+            <CarouselItem key={index} >
+              <SkillsContainer background={index % 2 === 0 ? ' bg-secondary-radial' : ' bg-secondary-dark-linear'}>
+                <h2 className={` relative z-20 text-6xl font-medium text-center [font-family:_philosopher,_'sans-serif']
+                  mt-20 max-md:mt-0 max-md:translate-y-10
+                  before:content-[''] before:h-[100vw] before:w-[100vw] 
+                  ${index % 2 === 0 ? ' before:bg-tertiary-radial  before:[box-shadow:_0_0_41px_2px_#00000070]' : 'text-secondary-light before:[background:var(--background-tertiary-radial-dark)]  before:[box-shadow:_0_0_20px_2px_#000000e9]'} 
+                  before:rounded-[50%] before:top-[-70vw]
+                  before:absolute before:-z-10 before:left-[50%] max-md:before:h-[150vw] max-md:before:w-[200vw] 
+                `}>
+                  Soft&nbsp;
+                  <span className="[font-family:_philosopher,_'sans-serif'] text-primary">
+                    Skills
+                  </span>
+                  <p className="relative z-50 translate-y-2 flex justify-center [font-size:var(--step-0)] text-quaternary-dark"
+                  >Como desenvolvi minhas habilidade</p>
+                </h2>
+                <div className={styleSkill.skillWrapper}>
+                  <div className="">
+                    <Image
+                      src={element.icon}
+                      height={800}
+                      width={800}
+                      alt="imagem de um globo"
+                      className=" w-[600px] h-auto max-md:w-3/4 rounded-xl m-auto overflow-hidden"
+                      priority
+                    />
+                  </div>
+                  <div className="flex flex-col w-2/3 max-w-[600px] max-md:w-11/12">
+                    <h3 className={index % 2 === 0 ? styleSkill.title : styleSkill.titleDarck}>
+                      <span className="text-primary font-black [font-family:_Philosopher,_sans-serif]">{element.title} </span>
+                      <span className="font-black [font-family:_Philosopher,_sans-serif]">{element.mainSubtitle}</span>
+                    </h3>
+                    <p className={index % 2 === 0 ? styleSkill.text : styleSkill.textDarck}>{element.text}</p>
+                  </div>
+                </div>
+              </SkillsContainer>
+            </CarouselItem>
+          )
+        })}
+      </CarouselContent>
+      <CarouselPrevious className="translate-x-14 max-sm:-translate-y-32 w-14 h-14 bg-[#a0a0a050] border-none shadow-xl text-5xl animate-pulse" />
+      <CarouselNext className="-translate-x-14 max-sm:-translate-y-32 w-14 h-14 bg-[#a0a0a050] border-none shadow-xl text-5xl animate-pulse" />
+    </Carousel>
+  )
+};
 
-        <div className="flex flex-col w-2/3 max-w-[600px] max-md:w-11/12">
-          <h3 className={index % 2 === 0 ? styleSkill.title : styleSkill.titleDarck}>
-            <span className="text-primary font-black [font-family:_Philosopher,_sans-serif]">{element.title} </span>
-            <span className="font-black [font-family:_Philosopher,_sans-serif]">{element.mainSubtitle}</span>
-          </h3>
-          <p className={index % 2 === 0 ? styleSkill.text : styleSkill.textDarck}>{element.text}</p>
-        </div>
-      </div>
-    ))}
-
-  </SkillsContainer>
-);
-
-const SkillsContainer = ({ children }: any) => (
-  <div className=" w-full bg-secondary-radial overflow-hidden" id="soft-skills">
+const SkillsContainer = ({ children, background }: any) => (
+  <div className={" w-full h-full overflow-hidden " + background} id="soft-skills">
     {children}
   </div>
 )

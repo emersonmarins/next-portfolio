@@ -59,6 +59,8 @@
     --background-secondary-gradient-dark: linear-gradient(to top, rgb(7, 7, 7), rgb(10, 10, 10), rgb(13, 13, 13), rgb(17, 17, 17), rgb(19, 19, 19), rgb(21, 21, 21));
     --background-secondary-radial: radial-gradient(#ffffff, #ffffff, #a9a9a9);
     --background-tertiary-radial: radial-gradient( #ebebeb 30%, #ffffff 60%, #3b3b3b );
+    --background-tertiary-radial-dark: radial-gradient( #212121 50% , #171717 63%, #090909 70% );
+
     --background-tertiary-gradient-dark: linear-gradient( rgb(14, 14, 14), rgb(16, 16, 16), rgb(19, 19, 19), rgb(21, 21, 21), rgb(16, 16, 16), rgb(21, 21, 21));
     --background-tertiary-dark: rgb(29, 29, 29);
     --background-tertiary-light: rgb(204, 204, 204);
