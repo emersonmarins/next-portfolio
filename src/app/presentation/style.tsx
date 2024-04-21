@@ -1,5 +1,5 @@
 export const stylePresentation = {
-  header: "flex justify-between items-center gap-4 h-auto w-full shadow-sm overflow-hidden bg-tertiary-dark-linear max-md:flex-col-reverse max-md:items-start max-md:pb-20",
+  header: "flex justify-center items-center gap-4 h-auto w-full max-w-[1350px] m-auto shadow-sm overflow-hidden max-md:flex-col-reverse max-md:items-start max-md:pb-20",
   headerContentInfo: `flex flex-col pl-20 gap-7 w-auto relative z-20
   max-lg:pl-4 max-md:pl-10
   before:content-[''] before:absolute before:bg-secondary-dark before:h-[430px] before:w-[620px]
@@ -8,9 +8,9 @@ export const stylePresentation = {
   headerTitle: "text-6xl w-80 font-black text-primary-light [font-family:_'kodchasan',sans-serif]",
   headerText01: "text-2xl text-secondary-light w-56 pb-7 [font-family:_'kodchasan',sans-serif] max-md:w-[70%] max-md:pb-0",
   headerText02: "text-lg text-quaternary-light w-52 [font-family:_'kodchasan',sans-serif] max-md:w-[90%]",
-  main: "flex gap-14 bg-primary-linear-light px-7 pb-40 pt-32 max-md:pt-20 max-sm:px-5",
-  contentVideo: `flex justify-center relative h-auto my-20 mx-auto grow pr-10
-  max-md:my-0 max-md:pr-0 max-md:w-full 
+  main: "flex gap-14 max-w-[1350px] m-auto px-7 pb-40 pt-32 max-md:pt-20 max-sm:px-5",
+  contentVideo: `flex justify-center relative h-auto my-20 mx-auto  pr-10
+  max-md:my-0 max-md:pr-0 max-md:w-full max-w-[900px]
   before:content-[''] before:absolute before:bg-secondary-dark before:h-[550px] before:w-[620px]
   before:z-0 before:rounded-2xl before:-rotate-45 before:-right-64 before:-translate-y-28
   `,

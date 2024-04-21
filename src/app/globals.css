@@ -68,7 +68,8 @@
     --background-transparent-dark: #0909096b;
     --background-header: #171717;
     --background-light: #f1f1f1;
-
+    --background-dark: #070707;
+    --background-softSkills: linear-gradient(to bottom,#070707, #111111, #212121);
 
     --background-blue: linear-gradient(to left, rgb(68, 2, 223), rgb(79, 172, 248));
     --background-yellow: linear-gradient(to left, rgb(255, 227, 69), rgb(255, 174, 0));

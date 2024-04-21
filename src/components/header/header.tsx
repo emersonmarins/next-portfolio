@@ -12,7 +12,7 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="bg-header">
-      <header className="flex relative justify-between px-7 w-full z-[300] header">
+      <header className="flex relative justify-between px-7 w-full z-[300] header max-w-[1250px] m-auto">
         <Logo />
         <Nav  menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
         <SocialMedias />

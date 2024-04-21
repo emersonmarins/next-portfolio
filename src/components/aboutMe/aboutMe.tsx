@@ -57,8 +57,8 @@ const aboutMeText: IAboutMeItem[] = [
 ]
 
 const AboutMe = () => (
-  <div className="flex justify-center w-full overflow-hidden m-auto relative bg-tertiary-dark-linear">
-    <div className="flex-wrap-reverse gap-y-14 w-full max-w-[1350px] relative h-auto p-10 justify-center items-center inline-flex">
+  <div className="flex justify-center w-full overflow-hidden m-auto relative max-sm:px-2 [background:_var(--background-softSkills)]">
+    <div className="flex-wrap-reverse gap-y-14 w-full max-w-[1350px] relative h-auto p-10 justify-center items-center m-auto inline-flex">
       <Circule />
       <Info />
       <SelfImage />
@@ -67,12 +67,12 @@ const AboutMe = () => (
 )
 
 const SelfImage = () => (
-  <div className="relative">
+  <div className="relative m-auto">
     <div className="sm:w-[450px] w-[350px] h-auto m-auto relative z-20 rounded-br-[150px]">
       {/* Rectangle */}
-      <div className="sm:h-[500px] w-full h-[400px] right-[20px] bottom-0 absolute -z-10 bg-gradient-to-b from-zinc-950 via-neutral-800 to-zinc-950 rounded-tl-[550px] rounded-tr-[250px] rounded-bl-[5px] rounded-br-[150px]" />
+      <div className="sm:h-[500px] w-full h-[400px] m-auto bottom-0 absolute -z-10 bg-gradient-to-b from-zinc-950 via-neutral-800 to-zinc-950 rounded-tl-[550px] rounded-tr-[250px] rounded-bl-[5px] rounded-br-[150px]" />
       <Image
-        className="sm:w-[400px] w-[300px] h-auto "
+        className="sm:w-[400px] w-[300px] h-auto m-auto"
         src={EmersonMarins}
         alt="Imagem de Emerson Marins"
         height={1200}

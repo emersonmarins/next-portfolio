@@ -1,5 +1,5 @@
 export const stylePortfolio = {
-  sectionPortfolio: "relative flex flex-col pb-52 w-full h-auto px-0 bg-primary-linear",
+  sectionPortfolio: "relative flex flex-col pb-52 w-full h-auto px-0 bg-[var(--background-dark)]",
   portfolioContent: " flex flex-wrap justify-around max-w-screen-2xl w-full max-lg:w-full w-[90%] items-center text-primary-light relative m-auto max-md:flex-col-reverse max-md:gap-10 ",
   portfolioContentInfo: "flex flex-col w-1/2 h-auto overflow-x-hidden overflow-y-auto max-md:w-[90%]  ",
   portfolioTitleContainer: " flex w-full px-2",
@@ -19,4 +19,5 @@ export const stylePortfolio = {
   wrapImg: " max-w-[400px] min-w-[360px] h-[500px] max-sm:h-[calc(100vw_/_2)] [transform-style:preserve-3d] [perspective:800px] max-md:max-w-[700px] max-md:w-[90%] max-md:min-w-[300px] ",
   portfolioImage: " w-full h-[500px] overflow-hidden shadow-[0_0_14px_7px_rgba(0,0,0,0145)] absolute [transform:rotateY(-7deg)] rounded-[5px] max-md:[transform:rotateY(0deg)]  ",
   portfolioImageImg: " relative w-full h-auto max-sm:h-[calc(100vw_/_2)] shadow-[0_0_21px_4px_rgba(0,0,0,0786)] bottom-0",
+  beforeAfterRetangule: " before:content-[''] before:w-[2000px] before:h-[800px] before:absolute before:bg-tertiary-dark-linear before:-z-10 before:rotate-[45deg] before:rounded-3xl before:bottom-[-275%] before:left-[calc(55%)] before:translate-x-[0%] after:content-[''] after:w-[2000px] after:h-[800px] after:absolute after:bg-tertiary-dark-linear after:-z-10 after:rotate-[45deg] after:rounded-3xl after:bottom-[-225%] after:right-[calc(55%)] after:translate-x-[0%]",
 }
