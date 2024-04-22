@@ -1,8 +1,12 @@
+'use client'
 import Image from "next/image";
 import EmersonMarins from "/public/assets/emerson-marins-03.webp";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { stylePortfolio } from "../projectPortfolio/styelObject";
 import { marked } from "marked";
+
+import { Element } from 'react-scroll';
+
 
 interface IAboutMeItem {
   mainTitle?: string
@@ -57,13 +61,19 @@ const aboutMeText: IAboutMeItem[] = [
 ]
 
 const AboutMe = () => (
-  <div className="flex justify-center w-full overflow-hidden m-auto relative max-sm:px-2 [background:_var(--background-softSkills)]">
+  <Element name='about-me' id="about-me">
+  
+  <div className="flex justify-center w-full overflow-hidden m-auto relative max-sm:px-2 [background:_var(--background-softSkills)]"
+    
+  >
     <div className="flex-wrap-reverse gap-y-14 w-full max-w-[1350px] relative h-auto p-10 justify-center items-center m-auto inline-flex">
       <Circule />
       <Info />
       <SelfImage />
     </div>
   </div>
+  </Element>
+
 )
 
 const SelfImage = () => (

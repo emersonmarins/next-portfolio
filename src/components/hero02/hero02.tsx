@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image"
 import ParticleBackground from "../particles/particles"
 import Esfera from "/public/assets/app/esfera.webp"
@@ -10,6 +11,7 @@ import { BiLogoHtml5, BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoNodejs, B
 import { SiNextdotjs } from "react-icons/si"
 import { TbBrandMysql, TbBrandReactNative } from "react-icons/tb"
 import { Skill } from "./skill"
+import { Link } from "react-scroll"
 
 
 
@@ -79,7 +81,17 @@ export const Hero02 = () => {
           >
             Transforme suas ideias em projetos incríveis e funcionais com soluções inovadoras únicas e impactante.
           </p>
-          <Button options={"SAIBA MAIS"} />
+          <Link
+            className="flex"
+            activeClass="active"
+            to="about-me"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            <Button options={"SAIBA MAIS"} />
+          </Link>
         </div>
         {/* Icons */}
         <div

@@ -1,6 +1,9 @@
 import { FaChevronDown } from "react-icons/fa";
 import "./styles.css"
-import Link from "next/link";
+// import Link from "next/link";
+
+import { Link, animateScroll} from 'react-scroll';
+
 
 const styleNav = {
   a: "block leading-normal relative px-0 py-[15px] text-primary-light capitalize",
@@ -31,11 +34,11 @@ const menuConfig = [
         name: "html css js",
         url: "/",
         dropdown: [
-          { type: "default", name: "louse soft design", url: "/" },
-          { type: "default", name: "marins movies", url: "/" },
-          { type: "default", name: "porcellan", url: "/" },
-          { type: "default", name: "artezanal", url: "/" },
-          { type: "default", name: "hotel", url: "/" }
+          // { type: "default", name: "louse soft design", url: "/" },
+          // { type: "default", name: "marins movies", url: "/" },
+          { type: "default", name: "porcellan", url: "porcelann" },
+          // { type: "default", name: "artezanal", url: "/" },
+          // { type: "default", name: "hotel", url: "/" }
         ]
       },
       {
@@ -43,11 +46,11 @@ const menuConfig = [
         name: "next",
         url: "/",
         dropdown: [
-          { type: "default", name: "louse soft design", url: "/" },
-          { type: "default", name: "marins movies", url: "/" },
-          { type: "default", name: "porcellan", url: "/" },
-          { type: "default", name: "artezanal", url: "/" },
-          { type: "default", name: "hotel", url: "/" }
+          { type: "default", name: "louse soft design", url: "louse-designer" },
+          // { type: "default", name: "marins movies", url: "/" },
+          // { type: "default", name: "porcellan", url: "/" },
+          // { type: "default", name: "artezanal", url: "/" },
+          // { type: "default", name: "hotel", url: "/" }
         ]
       },
       {
@@ -55,11 +58,12 @@ const menuConfig = [
         name: "reactNative",
         url: "/",
         dropdown: [
-          { type: "default", name: "louse soft design", url: "/" },
-          { type: "default", name: "marins movies", url: "/" },
-          { type: "default", name: "porcellan", url: "/" },
-          { type: "default", name: "artezanal", url: "/" },
-          { type: "default", name: "hotel", url: "/" }
+          { type: "default", name: "Em breve !", url: "/"}
+          // { type: "default", name: "louse soft design", url: "/" },
+          // { type: "default", name: "marins movies", url: "/" },
+          // { type: "default", name: "porcellan", url: "/" },
+          // { type: "default", name: "artezanal", url: "/" },
+          // { type: "default", name: "hotel", url: "/" }
         ]
       }
     ]
@@ -67,12 +71,12 @@ const menuConfig = [
   {
     type: "default",
     name: "quem sou",
-    url: "/",
+    url: "about-me",
   },
   {
     type: "default",
     name: "contato",
-    url: "/",
+    url: "contact",
   },
 ];
 
@@ -90,30 +94,49 @@ export const Nav = ({ menuOpen, setMenuOpen }: Props) => {
         {menuConfig.map((menuItem) => (
           <li key={menuItem.name} className={menuItem.type === 'dropdown' ? styleNav.dropdown : styleNav.li}>
             {menuItem.type === 'default' ? (
-              <Link href={`${menuItem.url}`} className={styleNav.a}>
-                {menuItem.name}
-              </Link>
+              
+              menuItem.url === 'about-me' || menuItem.url === 'contact' ? (
+                <Link
+                  href={`${menuItem.url}`}
+                  className={styleNav.a}
+                  activeClass="active"
+                  to={`${menuItem.url}`}
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+
+                >
+                  {menuItem.name}
+                </Link>
+              ) : (
+                < Link href={`${menuItem.url}`} className={styleNav.a} to='#'>
+                  {menuItem.name}
+                </ Link>
+
+              )
+
             ) : (
               <>
-                <Link className={styleNav.a} href={`${menuItem.url}`}>{menuItem.name}</Link>
+                <Link className={styleNav.a} href={`${menuItem.url}`} to={menuItem.url}>{menuItem.name}</Link>
                 <FaChevronDown className={styleNav.chevronDownPrimary} />
                 <ul className={styleNav.subMenu + styleNav.upArrow}>
                   {menuItem.dropdown?.map((subMenuItem) => (
                     <li key={subMenuItem.name} className={subMenuItem.type === 'default' ? 'hoverUnderline' : (styleNav.dropdown + 'hoverUnderline')}>
                       {subMenuItem.type === 'default' ? (
-                        <Link href={`${subMenuItem.url}`}>
+                        <Link href={`${subMenuItem.url}`} to={subMenuItem.url}>
                           <span className={styleNav.lineEfectHover}>{subMenuItem.name}</span>
                         </Link>
                       ) : (
                         <>
-                          <Link href={`${subMenuItem.url}`}>
+                          <Link href={`${subMenuItem.url}`} to={subMenuItem.url}>
                             <span className={styleNav.lineEfectHover}>{subMenuItem.name}</span>
                           </Link>
                           <FaChevronDown className={styleNav.chevronDown} />
                           <ul className={styleNav.subMenu + styleNav.subMenuRight}>
                             {subMenuItem.dropdown?.map((subMenuItem) => (
                               <li key={subMenuItem.name} className={"hoverUnderline"}>
-                                <Link href={`${subMenuItem.url}`}>
+                                <Link href={`${subMenuItem.url}`} to={subMenuItem.url}>
                                   <span className={styleNav.lineEfectHover}>{subMenuItem.name}</span>
                                 </Link>
                               </li>
@@ -129,6 +152,6 @@ export const Nav = ({ menuOpen, setMenuOpen }: Props) => {
           </li>
         ))}
       </ul>
-    </nav>
+    </nav >
   )
 };
